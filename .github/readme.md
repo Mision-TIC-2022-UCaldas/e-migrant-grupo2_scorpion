@@ -1,3 +1,3 @@
  # Mision TIC </scorpion >
 
-### Proyecto Realizado en IDE Visual Stud
+### Proyecto Realizado en IDE Visual Studio
