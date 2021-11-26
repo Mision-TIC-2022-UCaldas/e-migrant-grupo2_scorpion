@@ -130,11 +130,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmigrantesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NecesidadesController.cs" />
     <Compile Include="Data\emigrantContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Emigrante.cs" />
+    <Compile Include="Models\Necesidades.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +186,11 @@
     <Content Include="Views\Emigrantes\Details.cshtml" />
     <Content Include="Views\Emigrantes\Edit.cshtml" />
     <Content Include="Views\Emigrantes\Index.cshtml" />
+    <Content Include="Views\Necesidades\Create.cshtml" />
+    <Content Include="Views\Necesidades\Delete.cshtml" />
+    <Content Include="Views\Necesidades\Details.cshtml" />
+    <Content Include="Views\Necesidades\Edit.cshtml" />
+    <Content Include="Views\Necesidades\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

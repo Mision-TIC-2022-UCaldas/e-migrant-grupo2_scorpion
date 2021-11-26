@@ -20,5 +20,11 @@ namespace emigrant.Data
         }
 
         public System.Data.Entity.DbSet<emigrant.Models.Emigrante> Emigrantes { get; set; }
+
+        public System.Data.Entity.DbSet<emigrant.Models.Necesidades> Necesidades { get; set; }
     }
+
+   
+
+
 }

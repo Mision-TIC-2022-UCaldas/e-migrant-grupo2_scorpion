@@ -173,8 +173,7 @@ C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\bin\e
 C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\bin\es\System.Web.WebPages.resources.dll
 C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.AssemblyReference.cache
 C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.CoreCompileInputs.cache
-C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.CopyComplete
 C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.dll
 C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.pdb
+C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.CopyComplete
