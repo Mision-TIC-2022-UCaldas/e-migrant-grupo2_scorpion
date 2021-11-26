@@ -1,0 +1,94 @@
+﻿@model IEnumerable<emigrant.Models.Emigrante>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoIdentificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroIdentificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correoElectronico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroTelefonico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccionActual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.situacionLaboral)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoIdentificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroIdentificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correoElectronico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroTelefonico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccionActual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.situacionLaboral)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
