@@ -1,120 +1,278 @@
 ﻿@model emigrant.Models.Emigrante
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Registro";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<style>
+    body {
+        background-color: #080710;
+    }
+
+    .background {
+        width: 430px;
+        height: 520px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+    }
+
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+    .shape:first-child {
+        background: linear-gradient( #1845ad, #23a2f6 );
+        left: -80px;
+        top: -80px;
+    }
+
+    .shape:last-child {
+        background: linear-gradient( to right, #ff512f, #f09819 );
+        right: -30px;
+        bottom: -80px;
+    }
+
+    form {
+        /*height: 520px;
+        top: 50%;
+        left: 50%;
+
+        */
+        width: 440px;
+        background-color: rgba(255,255,255,0.13);
+        margin: auto;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 20px 20px;
+    }
+
+        form * {
+            font-family: 'Poppins',sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        form h3 {
+            font-size: 32px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+    label {
+        display: block;
+        margin-top: 30px;
+        font-size: 20px;
+        padding-left: 50px;
+        font-weight: 500;
+    }
+
+    input {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(255,255,255,0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        margin: auto;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    ::placeholder {
+        color: #e5e5e5;
+    }
 
 
-@using (Html.BeginForm()) 
+    button {
+        margin-top: 50px;
+        width: 100%;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    span {
+        color: #ff512f;
+        font-size: 15px;
+        margin: 20px;
+    }
+
+    select {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(255,255,255,0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        margin: auto;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    custom-select {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(255,255,255,0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        margin: auto;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .select-selected {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(255,255,255,0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        margin: auto;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+        .select-selected:after {
+            position: absolute;
+            content: "";
+            top: 14px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-color: #fff transparent transparent transparent;
+        }
+
+    .select-items {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(255,255,255,0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        margin: auto;
+        font-size: 14px;
+        font-weight: 300;
+    }
+</style>
+
+
+
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="container">
+
+    <div class="background">
+
     </div>
-    <div class="form-horizontal">
-        <h4>Emigrante</h4>
+    <div class="form">
+        <h3>Registro</h3>
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
-            </div>
+
+
+        <label>Nombre</label>
+        <input data-val="true" data-val-required="El campo nombre es obligatorio." id="nombre" name="nombre" type="text" value="" aria-describedby="nombre-error" aria-invalid="false" />
+        <span></span>
+        @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+
+
+        <label>Apellidos</label>
+        <input data-val="true" data-val-required="El campo apellidos es obligatorio." id="apellidos" name="apellidos" type="text" value="" />
+        <span></span>
+        @Html.ValidationMessageFor(model => model.apellidos, "", new { @class = "text-danger" })
+
+
+        <label>Tipo de Identificacion</label>
+        <div class="custom-select">
+            <select data-val="true" data-val-required="El campo numero Identificacion es obligatorio." id="numeroIdentificacion" name="numeroIdentificacion" type="text" value="">
+
+                <option value="cc">CC</option>
+                <option value="ti">TI</option>
+                <option value="ps">Pasaporte</option>
+
+
+            </select>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.apellidos, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.apellidos, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.apellidos, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @Html.ValidationMessageFor(model => model.numeroIdentificacion, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.tipoIdentificacion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.tipoIdentificacion, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.tipoIdentificacion, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.numeroIdentificacion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.numeroIdentificacion, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.numeroIdentificacion, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <label>Numero de Identificacion</label>
+        @Html.EditorFor(model => model.numeroIdentificacion, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.numeroIdentificacion, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.pais, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.pais, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.pais, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.fechaNacimiento, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.fechaNacimiento, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.fechaNacimiento, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <label>Pais de Origen</label>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.correoElectronico, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.correoElectronico, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.correoElectronico, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @Html.EditorFor(model => model.pais, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.pais, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.numeroTelefonico, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.numeroTelefonico, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.numeroTelefonico, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.direccionActual, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.direccionActual, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.direccionActual, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <label>Fecha de Nacimiento</label>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ciudad, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ciudad, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ciudad, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @Html.EditorFor(model => model.fechaNacimiento, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.fechaNacimiento, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.situacionLaboral, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.situacionLaboral, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.situacionLaboral, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <label>Correo Electronico</label>
+        @Html.EditorFor(model => model.correoElectronico, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.correoElectronico, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+
+        <label>Numero de Telefono</label>
+        @Html.EditorFor(model => model.numeroTelefonico, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.numeroTelefonico, "", new { @class = "text-danger" })
+
+        <label>Direccion</label>
+        @Html.EditorFor(model => model.direccionActual, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.direccionActual, "", new { @class = "text-danger" })
+
+
+        <label>Ciudad</label>
+
+        @Html.EditorFor(model => model.ciudad, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.ciudad, "", new { @class = "text-danger" })
+
+
+
+        <label>Situacion Laboral</label>
+
+        @Html.EditorFor(model => model.situacionLaboral, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.situacionLaboral, "", new { @class = "text-danger" })
+
+
+
+        <hr />
+
+        <button value="Create">Crear</button>
+
     </div>
+
 }
 
 <div>
+
     @Html.ActionLink("Back to List", "Index")
 </div>
 
