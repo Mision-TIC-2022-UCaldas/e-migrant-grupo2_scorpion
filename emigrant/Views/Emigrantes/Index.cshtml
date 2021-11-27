@@ -1,0 +1,119 @@
+﻿@model IEnumerable<emigrant.Models.Emigrante>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    input {
+        display: block;
+        height: 30px;
+        width: 300px;
+        background-color: rgba(255,255,255,0.07);
+        border-radius: 3px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 50px;
+        height: 30px;
+        background-color: #2e2c2c;
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        vertical-align: top;
+    }
+
+    .btn-default {
+        color: #fff;
+        background-color: #303030;
+        border-color: #ccc;
+    }
+
+    btn-delete {
+        background-color: red;
+    }
+</style>
+   
+
+
+<head>
+
+</head>
+
+<br />
+<br />
+<h2>Emigrantes Registrados</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div>
+    <table>
+        <tr>
+            <td>
+                Buscar:
+                <input type="search" id="findID" /><button  >buscar</button>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+<table id="table-content" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Tipo Identifacion</th>
+            <th>DNI</th>
+            <th>Pais</th>
+            <th>Nacimiento</th>
+            <th>Correo</th>
+            <th>Numero</th>
+            <th>Direccion</th>
+            <th>Ciudad</th>
+            <th>Situacion Laboral</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.apellidos)</td>
+                <td>@Html.DisplayFor(modelItem => item.tipoIdentificacion)</td>
+                <td>@Html.DisplayFor(modelItem => item.numeroIdentificacion)</td>
+                <td>@Html.DisplayFor(modelItem => item.pais)</td>
+                <td>@Html.DisplayFor(modelItem => item.fechaNacimiento)</td>
+                <td>@Html.DisplayFor(modelItem => item.correoElectronico)</td>
+                <td>@Html.DisplayFor(modelItem => item.numeroTelefonico)</td>
+                <td>@Html.DisplayFor(modelItem => item.direccionActual)</td>
+                <td>@Html.DisplayFor(modelItem => item.ciudad)</td>
+                <td>@Html.DisplayFor(modelItem => item.situacionLaboral)</td>
+
+                <td>@Html.ActionLink("Edit", "Edit", new { id = item.id })</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = item.id })</td>
+                <td class="btn-delete"> @Html.ActionLink("Delete", "Delete", new { id = item.id })</td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    $(document).ready(function () {
+        $('table-content').DataTable();
+    });
+
+</script>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+

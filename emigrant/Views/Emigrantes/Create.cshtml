@@ -1,0 +1,209 @@
+﻿@model emigrant.Models.Emigrante
+
+@{
+    ViewBag.Title = "Registro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color: #080710;
+    }
+
+    .background {
+        position: absolute;        
+        left: 50%;
+        top: 50%;
+    }
+
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+    .shape:first-child {
+        background: linear-gradient( #1845ad, #23a2f6 );
+        left: -80px;
+        top: -80px;
+    }
+
+    .shape:last-child {
+        background: linear-gradient( to right, #ff512f, #f09819 );
+        right: -30px;
+        bottom: -80px;
+    }
+
+    form {
+        /*height: 520px;
+        top: 50%;
+        left: 50%;
+
+        */
+        width: 440px;
+        background-color: rgba(255,255,255,0.13);
+        margin: auto;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 20px 20px;
+    }
+
+        form * {
+            font-family: 'Poppins',sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        form h3 {
+            font-size: 32px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 30px;
+            font-size: 20px;
+            padding-left: 50px;
+            font-weight: 500;
+        }
+
+   
+    ::placeholder {
+        color: #e5e5e5;
+    }
+
+
+    button {
+        margin-top: 50px;
+        width: 100%;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    span {
+        color: #ff512f;
+        font-size: 15px;
+        margin: 20px;
+    }
+
+    input {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(255,255,255,0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        margin: auto;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    
+</style>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="background">
+
+    </div>
+    <div class="from">
+        <h3>Registro</h3>
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <label>Nombre</label>
+        @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "input" } })
+        <span></span>
+        @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+
+
+        <label>Apellidos</label>
+        @Html.EditorFor(model => model.apellidos, new { htmlAttributes = new { @class = "input" } })
+        <span></span>
+        @Html.ValidationMessageFor(model => model.apellidos, "", new { @class = "text-danger" })
+
+
+        <label>Tipo de Identificacion</label>
+        @Html.EditorFor(model => model.tipoIdentificacion, new { htmlAttributes = new { @class = "input" } })
+
+        @Html.ValidationMessageFor(model => model.tipoIdentificacion, "", new { @class = "text-danger" })
+
+
+        <label>Numero de Identificacion</label>
+        @Html.EditorFor(model => model.numeroIdentificacion, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.numeroIdentificacion, "", new { @class = "text-danger" })
+
+
+        <label>Pais de Origen</label>
+
+        @Html.EditorFor(model => model.pais, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.pais, "", new { @class = "text-danger" })
+
+
+        <label>Fecha de Nacimiento</label>
+
+        @Html.EditorFor(model => model.fechaNacimiento, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.fechaNacimiento, "", new { @class = "text-danger" })
+
+        <label>Correo Electronico</label>
+        @Html.EditorFor(model => model.correoElectronico, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.correoElectronico, "", new { @class = "text-danger" })
+
+
+        <label>Numero de Telefono</label>
+        @Html.EditorFor(model => model.numeroTelefonico, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.numeroTelefonico, "", new { @class = "text-danger" })
+
+        <label>Direccion</label>
+        @Html.EditorFor(model => model.direccionActual, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.direccionActual, "", new { @class = "text-danger" })
+
+
+        <label>Ciudad</label>
+
+        @Html.EditorFor(model => model.ciudad, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.ciudad, "", new { @class = "text-danger" })
+
+
+
+        <label>Situacion Laboral</label>
+
+        @Html.EditorFor(model => model.situacionLaboral, new { htmlAttributes = new { @class = "input" } })
+        @Html.ValidationMessageFor(model => model.situacionLaboral, "", new { @class = "text-danger" })
+
+
+
+        <hr />
+
+        <button value="Create">Crear</button>
+
+    </div>
+
+}
+
+<div>
+
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
