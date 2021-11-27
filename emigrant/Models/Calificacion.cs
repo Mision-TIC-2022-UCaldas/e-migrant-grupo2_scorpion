@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace emigrant.Models
 {
-    public class appCalificasion
+    public class Calificacion
     {
         [Key]
         public int id { get; set; }
