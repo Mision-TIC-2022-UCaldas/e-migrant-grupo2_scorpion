@@ -131,7 +131,7 @@ namespace emigrant.Controllers
 
 
         //Consulta de Base de datos
-        List<Categorias> ListDNI() { 
+        List<DNI> ListDNI() { 
             List<DNI> DNI = new List<DNI>();
             return DNI;
         }
