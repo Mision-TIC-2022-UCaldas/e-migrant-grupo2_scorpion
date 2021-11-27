@@ -360,3 +360,4 @@ C:\Users\Ameth\Source\Repos\Mision-TIC-2022-UCaldas\e-migrant-grupo2_scorpion\em
 C:\Users\Ameth\Source\Repos\Mision-TIC-2022-UCaldas\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.pdb
 =======
 >>>>>>> 320a914fb7e8cd061ee7ee144e457054092ee01f
+C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.AssemblyReference.cache
