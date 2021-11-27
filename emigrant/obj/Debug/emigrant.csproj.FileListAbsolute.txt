@@ -267,3 +267,5 @@ E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.dll
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.pdb
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csprojAssemblyReference.cache
+C:\Users\Snirft\Desktop\Tic\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.CoreCompileInputs.cache
+C:\Users\Snirft\Desktop\Tic\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.AssemblyReference.cache
