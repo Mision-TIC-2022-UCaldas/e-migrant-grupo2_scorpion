@@ -187,7 +187,6 @@
     <Content Include="Views\Emigrantes\Details.cshtml" />
     <Content Include="Views\Emigrantes\Edit.cshtml" />
     <Content Include="Views\Emigrantes\Index.cshtml" />
-    <Content Include="Views\Emigrantes\Consulta.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
