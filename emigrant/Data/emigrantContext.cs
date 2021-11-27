@@ -21,11 +21,11 @@ namespace emigrant.Data
 
         public System.Data.Entity.DbSet<emigrant.Models.Emigrante> Emigrantes { get; set; }
 
-<<<<<<< HEAD
+
        // public System.Data.Entity.DbSet<emigrant.Models.Novedades> Novedades { get; set; }
-=======
-        public System.Data.Entity.DbSet<emigrant.Models.Calificacion> Calificacions { get; set; }
->>>>>>> 320a914fb7e8cd061ee7ee144e457054092ee01f
+
+        //blic System.Data.Entity.DbSet<emigrant.Models.Calificacion> Calificacions { get; set; }
+
     }
 
    

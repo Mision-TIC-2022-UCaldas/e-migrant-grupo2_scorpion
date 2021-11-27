@@ -138,6 +138,12 @@ namespace emigrant.Controllers
         }
 
 
+        public ActionResult Redi() {
+
+            return RedirectToAction("Index");
+
+        }
+
        
 
 

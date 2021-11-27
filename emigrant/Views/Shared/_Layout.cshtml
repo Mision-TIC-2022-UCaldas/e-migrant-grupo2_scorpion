@@ -5,11 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Imagrant</title>
-    <link href="~/Content/bootstrap.css" rel="stylesheet"/>
-    <script src="~/Scripts/bootstrap.js"/>
-    <script src="~/Scripts/jquery-3.4.1.js"/>
-    <link href="~/Content/jquery.dataTables.css" rel="stylesheet"/> 
-    <script src="~/Scripts/jquery.dataTables.js "/>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+  
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="870816629427-ugrj9f5a3segdm41kf1n2bq273j51l6j.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -32,18 +33,22 @@
                         <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                         <li>@Html.ActionLink("Registro Emigrantes", "Create", "Emigrantes")</li>
                         <li>@Html.ActionLink("Consultar Informacion", "Index", "Emigrantes")</li>
-						<li>@Html.ActionLink("Servicios", "Index", "Servicios")</li>
-						<li>@Html.ActionLink("Emergencias", "Index", "Emergencias")</li>
+                        <li>@Html.ActionLink("Servicios", "Index", "Servicios")</li>
+                        <li>@Html.ActionLink("Emergencias", "Index", "Emergencias")</li>
                         <li>@Html.ActionLink("Consultar ", "Consulta", "Emigrantes")</li>
 
 
                     </ul>
+
+                    
                 </div>
             </div>
         </div>
     </div>
     <br />
     <br /><br />
+
+    
 
     <div class="container body-content">
         @RenderBody()
