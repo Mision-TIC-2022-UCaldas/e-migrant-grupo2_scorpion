@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using emigrant.Data;
 using emigrant.Models;
+using emigrantContext = emigrant.Data.emigrantContext;
 
 namespace emigrant.Controllers
 {
