@@ -177,6 +177,7 @@ C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\D
 C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.dll
 C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.pdb
 C:\Users\RONAL SANCHEZ\Desktop\Hackaton\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.CopyComplete
+E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.CoreCompileInputs.cache
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\bin\emigrant.dll.config
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\bin\emigrant.dll
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\bin\emigrant.pdb
@@ -262,8 +263,6 @@ E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\bin\es\System.Web.R
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\bin\es\System.Web.WebPages.resources.dll
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\bin\es\System.Web.WebPages.Deployment.resources.dll
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\bin\es\System.Web.WebPages.Razor.resources.dll
-E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.CoreCompileInputs.cache
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csproj.CopyComplete
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.dll
 E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.pdb
-E:\hack\Nueva carpeta (5)\e-migrant-grupo2_scorpion\emigrant\obj\Debug\emigrant.csprojAssemblyReference.cache

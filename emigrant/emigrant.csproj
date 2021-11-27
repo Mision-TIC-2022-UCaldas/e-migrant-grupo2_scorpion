@@ -141,6 +141,7 @@
     <Compile Include="Models\Emergencia.cs" />
     <Compile Include="Models\emigrantContext.cs" />
     <Compile Include="Models\Emigrante.cs" />
+    <Compile Include="Models\Novedades.cs" />
     <Compile Include="Models\servicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
