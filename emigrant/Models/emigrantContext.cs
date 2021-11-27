@@ -23,7 +23,11 @@ namespace emigrant.Models
 
         public System.Data.Entity.DbSet<emigrant.Models.Emergencia> Emergencias { get; set; }
 
+<<<<<<< HEAD
         //blic System.Data.Entity.DbSet<emigrant.Models.Calificacion> Calificacions { get; set; }
+=======
+      //  public System.Data.Entity.DbSet<emigrant.Models.Calificacion> Calificacions { get; set; }
+>>>>>>> ff098f25030878a5033fb6de731c7b2ecd282c6d
 
     }
 }

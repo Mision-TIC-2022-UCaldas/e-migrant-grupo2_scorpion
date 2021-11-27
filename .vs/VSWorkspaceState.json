@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\emigrant"
   ],
-  "SelectedNode": "\\emigrant.sln",
+  "SelectedNode": "\\emigrant\\Web.config",
   "PreviewInSolutionExplorer": false
 }
