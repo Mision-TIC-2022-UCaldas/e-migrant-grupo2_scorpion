@@ -38,6 +38,8 @@
         background-color: red;
     }
 </style>
+   
+
 
 <head>
 
@@ -51,7 +53,15 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <div>
-    Buscar: <input type="search" id="findID" />
+    <table>
+        <tr>
+            <td>
+                Buscar:
+                <input type="search" id="findID" /><button  >buscar</button>
+            </td>
+        </tr>
+    </table>
+    
 </div>
 <table id="table-content" class="table table-bordered">
     <thead>
@@ -105,3 +115,5 @@
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
+
+
