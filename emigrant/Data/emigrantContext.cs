@@ -20,8 +20,9 @@ namespace emigrant.Data
         }
 
         public System.Data.Entity.DbSet<emigrant.Models.Emigrante> Emigrantes { get; set; }
+       // public System.Data.Entity.DbSet<emigrant.Models.Novedades> Novedades { get; set; }
 
-        public System.Data.Entity.DbSet<emigrant.Models.Calificacion> Calificacions { get; set; }
+       // public System.Data.Entity.DbSet<emigrant.Models.Calificacion> Calificacions { get; set; }
     }
 
    
