@@ -128,5 +128,16 @@ namespace emigrant.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        //Consulta de Base de datos
+        List<DNI> ListDNI() { 
+            List<DNI> DNI = new List<DNI>();
+            return DNI;
+        }
+
+
+
+
     }
 }
