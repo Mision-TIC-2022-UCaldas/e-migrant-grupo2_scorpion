@@ -22,5 +22,8 @@ namespace emigrant.Models
         public System.Data.Entity.DbSet<emigrant.Models.servicio> servicios { get; set; }
 
         public System.Data.Entity.DbSet<emigrant.Models.Emergencia> Emergencias { get; set; }
+
+        public System.Data.Entity.DbSet<emigrant.Models.Calificacion> Calificacions { get; set; }
+
     }
 }
