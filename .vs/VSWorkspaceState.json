@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\emigrant"
+    "\\emigrant",
+    "\\emigrant\\Views",
+    "\\emigrant\\Views\\Home"
   ],
-  "SelectedNode": "\\emigrant\\Web.config",
+  "SelectedNode": "\\emigrant\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

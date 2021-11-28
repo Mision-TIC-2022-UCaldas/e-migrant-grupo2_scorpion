@@ -31,5 +31,9 @@ namespace emigrant.Models
         public string direccionActual { get; set; }
         public string ciudad { get; set; }
         public string situacionLaboral { get; set; }
+
+        //User and password index login
+        public string username { get; set; }
+        public string pass { get; set; }
     }
 }
